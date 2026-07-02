@@ -1,6 +1,6 @@
-
 //Leetcode: 3761
 //Complexity: Med 
+
 import java.util.HashMap;
 
 public class MinMirrorPair {

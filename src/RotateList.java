@@ -1,4 +1,3 @@
-
 //Leetcode: 61
 //Complexity: Medium 
 public class RotateList {
