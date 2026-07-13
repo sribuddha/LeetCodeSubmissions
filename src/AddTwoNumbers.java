@@ -22,10 +22,12 @@ public class AddTwoNumbers {
             ListNode l = this;
             while (l != null) {
                 sbuf.append(l.val);
-                sbuf.append(",");
+                // sbuf.append(",");
                 l = l.next;
             }
+            sbuf.reverse();
             return sbuf.toString();
+
         }
     }
 
@@ -106,10 +108,10 @@ public class AddTwoNumbers {
     public static void main(String args[]) {
         ListNode l1 = new AddTwoNumbers().new ListNode(4);
         l1.next = new AddTwoNumbers().new ListNode(4);
-        ListNode l2 = new AddTwoNumbers().new ListNode(3);
+        ListNode l2 = new AddTwoNumbers().new ListNode(8);
         ListNode l3 = new AddTwoNumbers().new Solution().addTwoNumbers(l1, l2);
-
-        System.out.println("Answer should be 7,4 :" + l3.printList());
+        System.out.println(l1.printList() + " + " + l2.printList());
+        System.out.println("Answer should be 52 :" + l3.printList());
 
     }
 

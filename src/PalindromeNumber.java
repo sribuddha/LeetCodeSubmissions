@@ -47,15 +47,9 @@ public class PalindromeNumber {
         }
         result = result * 10 + var % 10;
 
-        // System.out.println(x+" "+result+" "+card);
+        // System.out.println(x + " " + result + " " + card);
 
-        for (int i = 0; i < card / 2 + 1; i++) {
-            if (x % 10 != result % 10)
-                return false;
-            x = x / 10;
-            result = result / 10;
-        }
-        return true;
+        return x == result;
 
     }
 
@@ -63,6 +57,13 @@ public class PalindromeNumber {
         int input = 10201;
 
         PalindromeNumber p = new PalindromeNumber();
+        System.out.println((int) Math.log10(Math.abs(input)) + 1);
+        System.out.println("Answer should be true :" + p.isPalindrome(input));
+
+        input = 177707771;
+
+        p = new PalindromeNumber();
+        System.out.println((int) Math.log10(Math.abs(input)) + 1);
         System.out.println("Answer should be true :" + p.isPalindrome(input));
 
     }
